@@ -1,0 +1,129 @@
+CAMPUS PUZZLE - UNIVERSITY TIMETABLE SCHEDULER
+------------------------------------------------------------------------
+Input: 18 classes | 8 rooms | 6 time slots
+
+========================================================================
+STAGE 1 - GREEDY BASELINE
+========================================================================
+Scheduled AI201      09:00 R-105  Perfect Fit
+Scheduled CAPSTONE   09:00 R-107  Perfect Fit
+Scheduled CHEM101    09:00 R-103  Perfect Fit
+Scheduled CS101      09:00 R-108  Wasted 70 seats
+Scheduled DB301      09:00 R-104  Wasted 30 seats
+Scheduled HIST101    09:00 R-101  Wasted 5 seats
+Scheduled DS401      10:00 R-105  Wasted 10 seats
+Scheduled MATH101    10:00 R-107  Wasted 40 seats
+Scheduled POETRY     10:00 R-101  Wasted 40 seats
+Scheduled SE301      10:00 R-103  Wasted 10 seats
+Scheduled AI202      11:00 R-105  Wasted 40 seats
+Scheduled CS102      11:00 R-106  Wasted 10 seats
+Scheduled ML401      11:00 R-104  Perfect Fit
+Scheduled NET301     11:00 R-101  Perfect Fit
+Scheduled CYB301     12:00 R-101  Wasted 10 seats
+Scheduled MATH202    12:00 R-102  Wasted 5 seats
+Scheduled PHY101     12:00 R-104  Wasted 10 seats
+Scheduled ENG101     14:00 R-101  Wasted 15 seats
+
+Summary: 18 scheduled, 0 unscheduled, 295 unused seats
+
+========================================================================
+STAGE 2 - CONFLICT GRAPH + WELSH-POWELL
+========================================================================
+Conflict graph: 18 classes, 28 conflicts
+Time slots required by coloring: 5
+
+Stage 2 Comparison
+Greedy baseline conflicts: 0
+Graph coloring conflicts:  0
+Graph coloring uses the conflict graph to keep connected classes in different time slots.
+
+Class -> Time Slot
+AI201      -> 11:00
+AI202      -> 12:00
+CAPSTONE   -> 11:00
+CHEM101    -> 09:00
+CS101      -> 10:00
+CS102      -> 11:00
+CYB301     -> 12:00
+DB301      -> 09:00
+DS401      -> 09:00
+ENG101     -> 09:00
+HIST101    -> 10:00
+MATH101    -> 12:00
+MATH202    -> 10:00
+ML401      -> 10:00
+NET301     -> 11:00
+PHY101     -> 14:00
+POETRY     -> 11:00
+SE301      -> 10:00
+
+========================================================================
+STAGE 3 - DYNAMIC PROGRAMMING ROOM OPTIMIZATION
+========================================================================
+Scheduled CHEM101    09:00 R-103  Perfect Fit
+Scheduled DB301      09:00 R-104  Wasted 30 seats
+Scheduled DS401      09:00 R-105  Wasted 10 seats
+Scheduled ENG101     09:00 R-101  Wasted 15 seats
+Scheduled CS101      10:00 R-107  Wasted 20 seats
+Scheduled HIST101    10:00 R-101  Wasted 5 seats
+Scheduled MATH202    10:00 R-102  Wasted 5 seats
+Scheduled ML401      10:00 R-104  Perfect Fit
+Scheduled SE301      10:00 R-103  Wasted 10 seats
+Scheduled AI201      11:00 R-105  Perfect Fit
+Scheduled CAPSTONE   11:00 R-107  Perfect Fit
+Scheduled CS102      11:00 R-106  Wasted 10 seats
+Scheduled NET301     11:00 R-101  Perfect Fit
+Scheduled POETRY     11:00 R-102  Wasted 50 seats
+Scheduled AI202      12:00 R-104  Wasted 20 seats
+Scheduled CYB301     12:00 R-101  Wasted 10 seats
+Scheduled MATH101    12:00 R-107  Wasted 40 seats
+Scheduled PHY101     14:00 R-104  Wasted 10 seats
+
+Summary: 18 scheduled, 0 unscheduled, 235 unused seats
+
+DP Comparison
+Greedy room waste: 295 seats
+DP room waste:     235 seats
+DP reduced room-capacity waste.
+
+========================================================================
+STAGE 4 - BACKTRACKING BEST-EFFORT SOLUTION
+========================================================================
+Scheduled AI201      09:00 R-105  Perfect Fit
+Scheduled CAPSTONE   09:00 R-107  Perfect Fit
+Scheduled CHEM101    09:00 R-103  Perfect Fit
+Scheduled CS101      09:00 R-108  Wasted 70 seats
+Scheduled DB301      09:00 R-104  Wasted 30 seats
+Scheduled HIST101    09:00 R-101  Wasted 5 seats
+Scheduled DS401      10:00 R-105  Wasted 10 seats
+Scheduled MATH101    10:00 R-107  Wasted 40 seats
+Scheduled POETRY     10:00 R-101  Wasted 40 seats
+Scheduled SE301      10:00 R-103  Wasted 10 seats
+Scheduled AI202      11:00 R-105  Wasted 40 seats
+Scheduled CS102      11:00 R-106  Wasted 10 seats
+Scheduled ML401      11:00 R-104  Perfect Fit
+Scheduled NET301     11:00 R-101  Perfect Fit
+Scheduled CYB301     12:00 R-101  Wasted 10 seats
+Scheduled MATH202    12:00 R-102  Wasted 5 seats
+Scheduled PHY101     12:00 R-104  Wasted 10 seats
+Scheduled ENG101     14:00 R-101  Wasted 15 seats
+
+Summary: 18 scheduled, 0 unscheduled, 295 unused seats
+Backtracking search nodes visited: 371
+
+========================================================================
+CONFLICT REPORT
+========================================================================
+No unscheduled classes.
+
+========================================================================
+MANUAL FIX LOG
+========================================================================
+All classes were scheduled successfully.
+No manual intervention is required.
+
+FINAL CHECK
+------------------------------------------------------------------------
+Classes scheduled: 18 / 18
+Final unused capacity: 295 seats
+Student-group and professor conflicts are treated as hard constraints.

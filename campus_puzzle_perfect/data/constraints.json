@@ -1,0 +1,167 @@
+{
+  "time_slots": [
+    "09:00",
+    "10:00",
+    "11:00",
+    "12:00",
+    "14:00",
+    "15:00"
+  ],
+  "classes": [
+    {
+      "id": "CS101",
+      "students": 180,
+      "professor_id": "P01"
+    },
+    {
+      "id": "CS102",
+      "students": 140,
+      "professor_id": "P02"
+    },
+    {
+      "id": "MATH101",
+      "students": 160,
+      "professor_id": "P03"
+    },
+    {
+      "id": "MATH202",
+      "students": 55,
+      "professor_id": "P04"
+    },
+    {
+      "id": "PHY101",
+      "students": 90,
+      "professor_id": "P05"
+    },
+    {
+      "id": "CHEM101",
+      "students": 75,
+      "professor_id": "P06"
+    },
+    {
+      "id": "HIST101",
+      "students": 45,
+      "professor_id": "P07"
+    },
+    {
+      "id": "ENG101",
+      "students": 35,
+      "professor_id": "P08"
+    },
+    {
+      "id": "AI201",
+      "students": 120,
+      "professor_id": "P09"
+    },
+    {
+      "id": "AI202",
+      "students": 80,
+      "professor_id": "P10"
+    },
+    {
+      "id": "DB301",
+      "students": 70,
+      "professor_id": "P11"
+    },
+    {
+      "id": "SE301",
+      "students": 65,
+      "professor_id": "P12"
+    },
+    {
+      "id": "NET301",
+      "students": 50,
+      "professor_id": "P13"
+    },
+    {
+      "id": "CYB301",
+      "students": 40,
+      "professor_id": "P14"
+    },
+    {
+      "id": "DS401",
+      "students": 110,
+      "professor_id": "P15"
+    },
+    {
+      "id": "ML401",
+      "students": 100,
+      "professor_id": "P16"
+    },
+    {
+      "id": "CAPSTONE",
+      "students": 200,
+      "professor_id": "P17"
+    },
+    {
+      "id": "POETRY",
+      "students": 10,
+      "professor_id": "P18"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "R-101",
+      "capacity": 50
+    },
+    {
+      "id": "R-102",
+      "capacity": 60
+    },
+    {
+      "id": "R-103",
+      "capacity": 75
+    },
+    {
+      "id": "R-104",
+      "capacity": 100
+    },
+    {
+      "id": "R-105",
+      "capacity": 120
+    },
+    {
+      "id": "R-106",
+      "capacity": 150
+    },
+    {
+      "id": "R-107",
+      "capacity": 200
+    },
+    {
+      "id": "R-108",
+      "capacity": 250
+    }
+  ],
+  "student_groups": {
+    "YEAR1_CS": [
+      "CS101",
+      "CS102",
+      "MATH101",
+      "PHY101",
+      "ENG101"
+    ],
+    "YEAR2_AI": [
+      "AI201",
+      "AI202",
+      "MATH202",
+      "DS401"
+    ],
+    "YEAR3_CSE": [
+      "DB301",
+      "SE301",
+      "NET301",
+      "CYB301"
+    ],
+    "YEAR4_AI": [
+      "DS401",
+      "ML401",
+      "CAPSTONE"
+    ],
+    "GENERAL": [
+      "HIST101",
+      "ENG101",
+      "POETRY"
+    ]
+  }
+}
